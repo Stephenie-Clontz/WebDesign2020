@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>SweetWaters Cafe Log In</title>
+ <link rel="stylesheet" href="LogIn.css">
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="navagation.css">
+
+ 
+ 
+<div class="navbar">
+  <a class="active" href="http://webdesign2020.centralus.cloudapp.azure.com/CoffeeShopPage.index.html"><i class="fa fa-fw fa-home"></i> Home</a> 
+  <a href="http://webdesign2020.centralus.cloudapp.azure.com/Menu.html"><i class="fa fa-fw fa-pencil-square-o"></i> Menu</a> 
+  <a href="http://webdesign2020.centralus.cloudapp.azure.com/ContactUs.html"><i class="fa fa-fw fa-envelope"></i> Contact Us</a> 
+  <a href="http://webdesign2020.centralus.cloudapp.azure.com/LogIn.html"><i class="fa fa-fw fa-user"></i> Login</a>
+
+</div>
+	<img src="Logo.jpg" alt="SweetWaters Cafe Logo"> 
+&nbsp
+&nbsp
+&nbsp
+&nbsp
+	<img src="icedcoffee.jpg" alt="Glass of Iced coffee" style="width:150px;height:150px;" class="floatRight">
+&nbsp
+&nbsp
+&nbsp
+&nbsp
+
+	 <img src="coffeebeans.jpg" alt="Coffee beans" style="width:150px;height:150px;" class="floatRight">
+&nbsp
+&nbsp
+&nbsp
+&nbsp
+	<img src="coffee.jpg" alt="Cup of coffee with foam art" style="width:150px;height:150px;" class="floatRight">
+
+</html> 
+</head>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+</style>
+<body>
+
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+</form>
+</body>

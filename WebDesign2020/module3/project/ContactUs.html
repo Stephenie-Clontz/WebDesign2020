@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>SweetWaters Cafe Contact Us</title>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+</style>
+<body>
+
+<div class="navbar">
+  <a class="active" href="http://webdesign2020.centralus.cloudapp.azure.com/CoffeeShopPage.index.html"><i class="fa fa-fw fa-home"></i> Home</a> 
+  <a href="http://webdesign2020.centralus.cloudapp.azure.com/Menu.html"><i class="fa fa-fw fa-pencil-square-o"></i> Menu</a> 
+  <a href="http://webdesign2020.centralus.cloudapp.azure.com/ContactUs.html"><i class="fa fa-fw fa-envelope"></i> Contact Us</a> 
+  <a href="http://webdesign2020.centralus.cloudapp.azure.com/LogIn.html"><i class="fa fa-fw fa-user"></i> Login</a>
+</div>
+
+</body>
+<h1>Contact us!</h1>
+<?php
+include 'mod3_config.php';
+include 'mod3_opendb.php';
+
+$sql= "SELECT * FROM `location` WHERE Zip_code = 75411";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) >0) {
+	// output of data
+	while ($row = mysqli_fetch_assoc($result)) {
+		echo "Address: " . $row ["Address"]. "<br>";
+		echo "City: " . $row ["City"]. "<br>";
+		echo "State: " . $row ["State"]. "<br>";
+		echo "Zip Code: " . $row ["Zip_Code"]. "<br>";
+		echo "Email: " . $row ["Email"]. "<br>";
+		echo "Phone Number: " . $row ["Phone"]. "<br><hr>";
+	}
+} else {
+	echo "0 results";
+}
+
+mysqli_close($conn);
+
+?>  
+<body>

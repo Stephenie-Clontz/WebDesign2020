@@ -1,0 +1,24 @@
+<?php
+include 'mod3_config.php';
+include 'mod3_opendb.php';
+
+$sql= "SELECT * FROM `location` WHERE Zip_code = 75411";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) >0) {
+	// output of data
+	while ($row = mysqli_fetch_assoc($result)) {
+		echo "Address: " . $row ["Address"]. "<br>";
+		echo "City: " . $row ["City"]. "<br>";
+		echo "State: " . $row ["State"]. "<br>";
+		echo "Zip Code: " . $row ["Zip_Code"]. "<br>";
+		echo "Email: " . $row ["Email"]. "<br>";
+		echo "Phone Number: " . $row ["Phone"]. "<br><hr>";
+	}
+} else {
+	echo "0 results";
+}
+
+mysqli_close($conn);
+
+?> 
